@@ -1,0 +1,48 @@
+doctype html
+
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(href='favicon.ico', rel='icon')
+    link(href='css/styles.css', rel='stylesheet')
+    title Home | Adam Fields
+
+  body.home
+    div.main-nav
+      ul.nav
+        li.name Adam Fields
+        li #[a.active(href='index.html') Home]
+        li #[a(href='about.html') About]
+
+    header.header
+      div.header-content
+        img.profile-image(src='images/me.png', alt='photo of adam fields')
+        h1.tag.name Adam Fields
+        p.tag.location Software Engineer in Boston, MA
+
+    main.main.container
+      div.row
+        div.col-50
+          div.card
+            h2 Background
+            p I'm a self-taught web developer working on the engineering team for #[a(href='https://www.bostonglobe.com', target='_blank', rel='noopener noreferrer') The Boston Globe]. I love great journalism as much as I love building for the web platform, so it's a perfect match.
+        div.col-50
+          div.card
+            h2 Goals
+            p I've been in the industry for almost 4 years, but I still love learning. I'm looking to continue expanding my skills in:
+            ul.skills
+              li Sass
+              li SVG
+              li Accessibility
+              li UX
+              li Performance
+
+    .footer
+      ul
+        li
+          a.social.linkedin(href='https://linkedin.com/in/adamelliotfields', target='_blank', rel='noopener noreferrer')
+        li
+          a.social.github(href='https://github.com/adamelliotfields', target='_blank', rel='noopener noreferrer')
+      p Built with ❤️ by #[a(href='https://github.com/adamelliotfields', target='_blank', rel='noopener noreferrer') Adam]
+      p.copyright &copy; 2020
