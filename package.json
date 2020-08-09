@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "treehouse-frontend-techdegree-archive",
+  "version": "0.0.0",
+  "scripts": {
+    "start:1": "lerna run --stream --scope=01-profile-page start",
+    "start:2": "lerna run --stream --scope=02-responsive-layout start",
+    "start:3": "lerna run --stream --scope=03-registration-form start",
+    "start:4": "lerna run --stream --scope=04-style-guide start",
+    "start:5": "lerna run --stream --scope=05-photo-gallery start",
+    "start:6": "lerna run --stream --scope=06-game-show start"
+  },
+  "devDependencies": {
+    "lerna": "3.22.1"
+  }
+}
