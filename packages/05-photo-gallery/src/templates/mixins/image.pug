@@ -1,0 +1,4 @@
+mixin image({ alt, caption, src })
+  <!-- #{alt} -->
+  a(href=`photos/${src}`, data-caption=caption)
+    img.img(src=`photos/thumbnails/${src}`, alt=alt)

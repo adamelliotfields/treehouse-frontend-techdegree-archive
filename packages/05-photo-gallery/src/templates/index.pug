@@ -1,0 +1,12 @@
+extends ./partials/layout.pug
+
+block content
+  main.container
+    form.form#form
+      label.label(for='search') Search
+      input.input#search(type='search', name='search', placeholder='Search')
+
+    div.grid.gallery#gallery
+      include ./mixins/image.pug
+      each photo in photos
+        +image(photo)

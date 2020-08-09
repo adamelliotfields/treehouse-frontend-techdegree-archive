@@ -1,0 +1,17 @@
+/* Layout styles. */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  /* With 40px padding and a 20px grid gap, this will give us 200x200px thumbnails. */
+  max-width: 900px;
+  /* The container padding should match the grid gap. */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
