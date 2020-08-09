@@ -3,6 +3,7 @@
   "name": "treehouse-frontend-techdegree-archive",
   "version": "0.0.0",
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "start:1": "lerna run --stream --scope=01-profile-page start",
     "start:2": "lerna run --stream --scope=02-responsive-layout start",
     "start:3": "lerna run --stream --scope=03-registration-form start",
