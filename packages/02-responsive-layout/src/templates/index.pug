@@ -1,0 +1,96 @@
+doctype html
+
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(href='favicon.ico', rel='icon')
+    link(href='https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap', rel='stylesheet')
+    link(href='css/styles.css', rel='stylesheet')
+    title Student Name
+
+  body#top
+    nav.navbar
+      span.navbar-name Student Name
+      ul.navbar-list
+        li.navbar-list-item
+          a.navbar-link(href='#top') Home
+        li.navbar-list-item
+          a.navbar-link(href='#portfolio') Portfolio
+        li.navbar-list-item
+          a.navbar-link(href='#skills') Skills
+        li.navbar-list-item
+          a.navbar-link(href='#contact') Contact
+    header.header.container
+      div.grid
+        p.lead Hi! I'm a front-end developer who loves responsive design and CSS. I recently finished learning front-end web development at Treehouse and am excited to put all my skills to use!
+        figure.image
+          img(src='images/profile.png', alt='student profile picture')
+    main.main.container#portfolio
+      h2.title PORTFOLIO
+      div.grid
+        div
+          figure.image
+            img(src='images/portfolio-1.png', alt='')
+          h3 Marketing Page
+          p This project shows the front page of a marketing website meant for a specific business I'm interested in.
+        div
+          figure.image
+            img(src='images/portfolio-2.png', alt='')
+          h3 Search Page
+          p This project searches through a specific database to find information that the user is trying to look up.
+        div
+          figure.image
+            img(src='images/portfolio-3.png', alt='')
+          h3 Travel App
+          p This project compares travel times based on different transportation methods and tells you the best one.
+        div
+          figure.image
+            img(src='images/portfolio-4.png', alt='')
+          h3 Map of Favorite Spots
+          p This project uses mapping APIs to plot points for my favorite sports in the city for a do-it-yourself walking tour.
+        div
+          figure.image
+            img(src='images/portfolio-5.png', alt='')
+          h3 Photo Gallery
+          p This project shows pictures from a recent trip to the viewer and allows them to easily navigate through photos.
+        div
+          figure.image
+            img(src='images/portfolio-6.png', alt='')
+          h3 Calculator
+          p Someone can enter in the numbers they want, and press the big blue button and get the result.
+
+    section.skills.container#skills
+      h2.title SKILLS
+      div.grid
+        h3.progress-label HTML
+        span.progress
+          span.progress-bar(style='width: 100%')
+        h3.progress-label CSS
+        span.progress
+          span.progress-bar(style='width: 80%')
+        h3.progress-label JavaScript
+        span.progress
+          span.progress-bar(style='width: 60%')
+
+    section.contact.container#contact
+      h2.title CONTACT
+      div
+        p.lead If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!
+        p Phone #[a(href='tel:11115551234') +1 (111) 555-1234]
+        p Email #[a(href='mailto:email@yoursite.com') email@yoursite.com]
+
+    footer.footer
+      span.footer-name Student Name
+      ul.footer-list
+        li.footer-list-item
+          a.footer-link(href='#top') Back to top
+        li.footer-list-item
+          a.footer-link(href='#top') Home
+        li.footer-list-item
+          a.footer-link(href='#portfolio') Portfolio
+        li.footer-list-item
+          a.footer-link(href='#skills') Skills
+        li.footer-list-item
+          a.footer-link(href='#contact') Contact

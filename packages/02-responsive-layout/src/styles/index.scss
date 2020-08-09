@@ -1,0 +1,342 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  color: black;
+  /* Montserrat Google font plus standard sans-serif system fonts. */
+  font-family: Montserrat, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  font-size: 16px;
+  margin: 0;
+  /* Offset the height of the navbar. */
+  padding-top: 207px;
+}
+
+/*
+ * The navbar is a flex element with 2 children: the student's name and a list of links.
+ * On mobile, both the navbar and the list should be columns, with children centered.
+ * On tablet, the navbar should be a column, and the list should be a row, with children centered.
+ * On desktop, both the navbar and the list should be a single row, with the list aligned right.
+ */
+.navbar {
+  align-items: center;
+  background-color: #f8d47d;
+  display: flex;
+  flex-direction: column;
+  height: 207px;
+  padding: 1rem 30px;
+  position: fixed;
+  /* Fix the navbar to the top of the document. */
+  top: 0;
+  width: 100%;
+  /* Z-index doesn't have to be a huge number, just greater than any other indices. */
+  z-index: 1;
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+
+    &-item {
+      padding: 0.5rem;
+    }
+  }
+
+  &-name {
+    font-family: Merriweather, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 auto;
+    /* Never wrap the name, even if the screen is tiny. */
+    white-space: nowrap;
+  }
+
+  &-link {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      color: gray;
+    }
+  }
+}
+
+/* Container to center content and provide horizontal padding. */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Header section. */
+.header {
+  margin-top: 2rem;
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lead {
+    margin: 0 0 2rem 0;
+    align-self: center;
+  }
+
+  .image {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+/* Larger and thinner text to stand out. */
+.lead {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Section title. */
+.title {
+  color: #e88a68;
+  font-family: Merriweather, serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lead,
+.title {
+  font-size: 1.5rem;
+}
+
+/* Image class used for figure elements. */
+.image {
+  margin: 0;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* Main section has a white background to stand out. */
+.main {
+  background-color: white;
+  padding: 30px;
+  max-width: calc(100vw - 60px);
+
+  .grid {
+    gap: 30px;
+    grid-template-columns: 1fr;
+
+    > div {
+      text-align: center;
+    }
+  }
+}
+
+/* Skills section. */
+.skills {
+  padding: 30px;
+
+  .grid {
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: 105px 1fr;
+    justify-content: center;
+  }
+}
+
+/* Progress bar used in the skills section. */
+.progress {
+  background-color: #ededed;
+  display: flex;
+  height: 1rem;
+  /* Need to set width to 100% because it is in a flex container. */
+  width: 100%;
+
+  &-bar {
+    background-color: #f8d47d;
+  }
+
+  &-label {
+    margin: 0;
+    text-align: right;
+  }
+}
+
+/* Contact section. */
+.contact {
+  border-bottom: 1px solid #808080;
+  max-width: calc(100vw - 60px);
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+  > div {
+    text-align: center;
+  }
+
+  a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: #e88a68;
+      text-decoration: underline;
+    }
+  }
+}
+
+/*
+ * The footer is similar to the Navbar, except it is always a row.
+ * On mobile viewports, only the back-to-top link is shown.
+ * The links are toggled using responsive utility classes.
+ */
+.footer {
+  align-items: center;
+  display: flex;
+  padding: 1rem 30px;
+  width: 100%;
+
+  &-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+
+    &-item {
+      display: none;
+      padding: 0.5rem;
+
+      &:first-child {
+        display: list-item;
+      }
+    }
+  }
+
+  &-name {
+    margin: 0;
+    /* Never wrap the name, even if the screen is tiny. */
+    white-space: nowrap;
+  }
+
+  &-link {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      color: #e88a68;
+    }
+  }
+}
+
+/* Tablet. */
+@media (min-width: 768px) {
+  body {
+    padding-top: 99px;
+  }
+
+  .navbar {
+    height: 99px;
+
+    &-list {
+      flex-direction: row;
+      margin: 0 auto;
+    }
+  }
+
+  .header {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lead {
+      margin: 0 0 2rem 30px;
+    }
+
+    .image {
+      text-align: right;
+    }
+  }
+
+  .lead,
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .main {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .footer-list-item {
+    display: list-item;
+
+    &:first-child {
+      display: none;
+    }
+  }
+}
+
+/* Desktop. */
+@media (min-width: 1024px) {
+  body {
+    padding-top: 68px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    height: 68px;
+
+    &-name {
+      margin: 0;
+    }
+
+    &-list {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  .lead,
+  .title {
+    font-size: 2rem;
+  }
+
+  .lead {
+    line-height: 1.375;
+  }
+
+  .main {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .skills.container {
+    max-width: 50%;
+  }
+}
+
+/* Widescreen. */
+@media (min-width: 1280px) {
+  .header {
+    .grid {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+}
