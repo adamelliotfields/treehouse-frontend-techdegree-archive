@@ -1,0 +1,51 @@
+/* Grid
+   ========================================================================== */
+
+.container {
+  padding: 0 10px;
+
+  @include media($tablet) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+
+  @include media($tablet) {
+    flex-direction: row;
+  }
+}
+
+[class*='col-'] {
+  border-radius: 5px;
+  flex-basis: 100%;
+  margin-top: 10px;
+  min-height: 25px;
+  padding: 10px;
+
+  @include media($tablet) {
+    margin-top: 0;
+
+    // Add a little horizontal white space to adjacent columns.
+    & + & {
+      margin-left: 10px;
+    }
+
+    // Centers the column in the row (could use justify-content, but sticking with the mockup).
+    &.centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// Add background colors for columns in the style guide.
+@include theme-column-background-colors;
+
+// Add responsive widths for columns.
+@include column-widths;

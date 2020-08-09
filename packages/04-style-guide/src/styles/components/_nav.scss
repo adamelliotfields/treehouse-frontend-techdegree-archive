@@ -1,0 +1,31 @@
+/* Nav
+   ========================================================================== */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 0;
+
+  @include media($tablet) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &-link {
+    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $turquoise-blue;
+      color: $white;
+    }
+
+    @include media($tablet) {
+      flex-basis: 100px;
+    }
+  }
+}

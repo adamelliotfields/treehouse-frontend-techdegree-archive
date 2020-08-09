@@ -1,0 +1,26 @@
+/* Buttons
+   ========================================================================== */
+
+.btn {
+  border: 0;
+  border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  width: 100%;
+
+  @include media($tablet) {
+    padding: 10px 30px;
+  }
+
+  + .btn {
+    @include media($tablet) {
+      margin-left: 10px;
+    }
+  }
+}
+
+// Add our button variants including hover state.
+@include button-background-colors;

@@ -1,0 +1,48 @@
+/* Typography
+   ========================================================================== */
+
+* {
+  color: $gray;
+  font-family: $sans-serif;
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+p {
+  line-height: 1.45em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.headline {
+  &-primary {
+    color: $turquoise-blue;
+    margin-left: 10px;
+  }
+
+  &-secondary {
+    color: $gray;
+    font-weight: 300;
+  }
+}
+
+.link {
+  color: $maya-blue;
+  font-weight: 700;
+}
+
+.blockquote {
+  border-left: 8px solid $turquoise-blue;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 300;
+  margin-left: 20px;
+  padding-left: 20px;
+}

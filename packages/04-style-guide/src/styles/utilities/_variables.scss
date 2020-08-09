@@ -1,0 +1,63 @@
+// Color names from https://www.color-blindness.com/color-name-hue
+
+// Whites.
+$white: #fff;
+
+// Grays.
+$very-light-gray: #ccc;
+$gray: #777;
+
+// Reds.
+$mona-lisa-red: #fd9f85;
+$froly-red: #e4757a;
+
+// Oranges.
+$wax-flower-orange: #ec9fa3;
+$coral-orange: #fd7856;
+
+// Violets.
+$wisteria-violet: #deb2ee;
+$lilac-bush-violet: #927bc1;
+
+// Greens.
+$granny-smith-apple-green: #88d9a0;
+$emerald-green: #63cc82;
+
+// Blues.
+$aquamarine-blue: #80f4d1;
+$turquoise-blue: #58e1c1;
+$electric-blue: #7ee6fd;
+$maya-blue: #51ddfc;
+$boston-blue: #4da2bb;
+
+// Theme colors used for coloring the columns. Each index aligns with a column size, i.e., index 1
+// would provide the color for `col-1`.
+// prettier-ignore
+$theme-colors:
+  $lilac-bush-violet
+  $coral-orange
+  $wisteria-violet
+  $electric-blue
+  $granny-smith-apple-green
+  $boston-blue
+  $wax-flower-orange
+  $mona-lisa-red
+  $froly-red
+  $emerald-green
+  $maya-blue
+  $aquamarine-blue;
+
+// Button variants and their corresponding background colors.
+$button-colors: (
+  'default': $maya-blue,
+  'error': $froly-red,
+  'info': $lilac-bush-violet,
+  'success': $emerald-green,
+  'warning': $coral-orange,
+);
+
+// Fonts.
+$sans-serif: 'Lato', sans-serif;
+
+// Breakpoints.
+$tablet: 768px;

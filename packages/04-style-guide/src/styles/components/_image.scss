@@ -1,0 +1,34 @@
+/* Images
+   ========================================================================== */
+
+.img {
+  &-avatar,
+  &-frame,
+  &-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-avatar,
+  &-frame {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  &-avatar {
+    max-height: 100%;
+  }
+
+  &-frame {
+    border: 1px solid $very-light-gray;
+    padding: 13px;
+  }
+
+  &-logo {
+    @include media($tablet) {
+      margin-left: initial;
+      margin-right: initial;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+// This demonstrates a mixin that accepts an argument and inserts content.
+@mixin media($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// This demonstrates looping over a map.
+@mixin button-background-colors {
+  @each $button, $color in $button-colors {
+    .#{$button} {
+      background-color: $color;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: lighten($color, 15%);
+      }
+    }
+  }
+}
+
+// This demonstrates looping over an array using @each.
+@mixin theme-column-background-colors {
+  @each $color in $theme-colors {
+    // Each loops don't provide the index for you, so you have to get it manually. Also worth
+    // mentioning that Sass arrays do not start at index 0!
+    $i: index($theme-colors, $color);
+    .theme {
+      &.col-#{$i} {
+        background-color: $color;
+      }
+    }
+  }
+}
+
+// This demonstrates using a for loop.
+@mixin column-widths {
+  @for $i from 1 through 12 {
+    @include media($tablet) {
+      .col-#{$i} {
+        // To do division in Sass, you can't have spaces around the operator.
+        flex-basis: percentage($i/12);
+      }
+    }
+  }
+}
